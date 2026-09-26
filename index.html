@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full 360-Degree Wheel Navigation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ccm-11">
+    <div class="ccm-11__stage">
+      <div class="ccm-11__pointer"></div>
+      
+      <!-- Definisikan total item dengan --n: 8 -->
+      <div class="ccm-11__machine">
+        <ul class="ccm-11__wheel" style="--n: 8;">
+          <!-- Setiap li wajib memiliki urutan indeks --i dimulai dari 0 sampai 7 -->
+          <li style="--i: 0;"><button class="ccm-11__stop is-active" aria-pressed="true">Home</button></li>
+          <li style="--i: 1;"><button class="ccm-11__stop" aria-pressed="false">Series</button></li>
+          <li style="--i: 2;"><button class="ccm-11__stop" aria-pressed="false">Films</button></li>
+          <li style="--i: 3;"><button class="ccm-11__stop" aria-pressed="false">Live</button></li>
+          <li style="--i: 4;"><button class="ccm-11__stop" aria-pressed="false">Sports</button></li>
+          <li style="--i: 5;"><button class="ccm-11__stop" aria-pressed="false">Kids</button></li>
+          <li style="--i: 6;"><button class="ccm-11__stop" aria-pressed="false">Music</button></li>
+          <li style="--i: 7;"><button class="ccm-11__stop" aria-pressed="false">My list</button></li>
+        </ul>
+
+        <div class="ccm-11__face">
+          <em>Now browsing</em>
+          <div class="ccm-11__current">Home</div>
+          <div class="ccm-11__steer">
+            <button class="ccm-11__prev" aria-label="Previous">←</button>
+            <button class="ccm-11__next" aria-label="Next">→</button>
+          </div>
+        </div>
+        
+        <div class="ccm-11__live" aria-live="polite">Home selected</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
