@@ -177,3 +177,50 @@
     transition-duration: .01s !important;
   }
 }
+/* ==========================================
+   PERBAIKAN RESPONSIVE UNTUK LAYAR MOBILE
+   ========================================== */
+@media (max-width: 480px) {
+  /* 1. Perkecil ukuran container mesin utama */
+  .ccm-11__machine {
+    width: 260px;
+    height: 260px;
+  }
+
+  /* 2. Sesuaikan radius lingkaran tombol (diubah dari 170px ke 130px) */
+  .ccm-11__wheel li {
+    translate: calc(cos(var(--a)) * 130px) calc(sin(var(--a)) * 130px);
+  }
+
+  /* 3. Perkecil pointer bagian atas */
+  .ccm-11__pointer {
+    top: calc(50% - 150px);
+  }
+
+  /* 4. Perkecil ukuran panel teks di tengah roda agar proporsional */
+  .ccm-11__face {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ccm-11__current {
+    font-size: 18px;
+  }
+
+  /* 5. Perkecil sedikit ukuran tombol menu agar tidak berbenturan */
+  .ccm-11__stop {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .ccm-11__stop.is-active {
+    scale: 1.08; /* Mengurangi sedikit efek scale agar tidak menabrak teks tengah */
+  }
+
+  /* 6. Perkecil tombol navigasi panah di tengah */
+  .ccm-11__steer button {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
